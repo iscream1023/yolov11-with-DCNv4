@@ -1,0 +1,5 @@
+/.vscode
+/runs
+/yolo11n.pt
+/yolo26n.pt
+/yolo_v11.yaml
