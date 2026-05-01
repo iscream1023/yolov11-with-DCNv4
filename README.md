@@ -42,21 +42,24 @@ To use DCNv4/DCNv2 within the YOLO framework, you must use the customized nn mod
 
     Editable Installation: Install the ultralytics package in editable mode. This allows you to modify the source code (like our DCNv4 integration) and have the changes reflected immediately without affecting other global installations.
 
-Bash
 
 ### Navigate to your local ultralytics directory
+```
 cd path/to/your/local/ultralytics
-
+```
 ### Install in editable mode
+```
 pip install -e . --no-deps
-
-Step 4: Finalize Dependencies
+```
+### Step 4: Finalize Dependencies
 
 Install any remaining required packages that may be missing in your environment.
 Bash
 
 ### Install additional requirements
+```
 pip install -r requirements.txt
+```
 
 Key Technical Notes
 
