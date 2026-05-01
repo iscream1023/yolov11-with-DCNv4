@@ -114,4 +114,4 @@ Key Technical Notes
 
 [^1]: Wang, R., Fu, B., Fu, G., & Wang, M. (2020). DCN V2: Improved Deep & Cross Network and Practical Lessons for Web-scale Learning to Rank Systems. arXiv preprint arXiv:2008.13535. https://doi.org/10.48550/arXiv.2008.13535
 [^2]: Lu, W., Jia, J., Li, R., He, J., & Dai, J. (2024). Efficient Deformable ConvNets: Rethinking Dynamic and Sparse Operator for Vision Applications. arXiv preprint arXiv:2401.06197. https://doi.org/10.48550/arXiv.2401.06197
-[^3]: * **D-Fire Dataset:** Venâncio, P. V. A. B., Lisboa, A. C., & Barbosa, A. V. (2022). An automatic fire detection system based on deep convolutional neural networks for low-power, resource-constrained devices. *Neural Computing and Applications*, 34(18), 15349-15368. https://doi.org/10.1007/s00521-022-07467-z
+[^3]: **D-Fire Dataset:** Venâncio, P. V. A. B., Lisboa, A. C., & Barbosa, A. V. (2022). An automatic fire detection system based on deep convolutional neural networks for low-power, resource-constrained devices. *Neural Computing and Applications*, 34(18), 15349-15368. https://doi.org/10.1007/s00521-022-07467-z
