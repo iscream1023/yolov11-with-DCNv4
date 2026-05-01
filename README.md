@@ -14,7 +14,7 @@ To evaluate the impact of deformable convolutions on extracting irregular and dy
 ### 1. Detection Performance
 The following table presents the detection performance metrics evaluated on the YOLOv11-nano model.
 
-| Metric | Baseline (YOLOv11) | Experiment 1 (DCNv2) | Experiment 2 (DCNv4) | Improvement (vs. Baseline) |
+| Metric | Baseline (YOLOv11) | Experiment 1 (YOLOv11 + DCNv2) | Experiment 2 (YOLOv11 + DCNv4) | Improvement (vs. Baseline) |
 | :--- | :---: | :---: | :---: | :---: |
 | mAP 50 | 0.7581 | 0.7613 | 0.7716 | +1.35%p |
 | mAP 50-95 | 0.4328 | 0.4397 | 0.4471 | +1.43%p |
@@ -26,16 +26,14 @@ The following table presents the detection performance metrics evaluated on the 
 Based on the experimental evaluations, we derive the following conclusions:
 1. **Scale-dependent Performance Variation:** The integration of DCNv4 contributed to an improvement in detection accuracy for the YOLOv11-nano (`n`) model. However, no significant performance gains were observed when applied to the larger YOLOv11-small (`s`) model.
    
-    | Metric | Baseline (YOLOv11s) | Experiment 1 (DCNv4) |
+    | Metric | Baseline (YOLOv11s) | Experiment 3 (yolo 11s + DCNv4) |
     | :--- | :---: | :---: |
     | mAP 50 | 0.7865 | 0.7883 |
     | mAP 50-95 | 0.4610 | 0.4672 | 
     | Precision | 0.7757 | 0.7717 | 
     | Recall | 0.7215 | 0.7274 | 
 
-2. **Increased Computational Overhead:** The application of DCN modules generally resulted in an increase in inference latency across the models compared to the baseline architecture.
-
-3. **Hardware Deployment Constraints:** A critical limitation identified in this study is hardware deployability. Currently, deploying the modified architecture equipped with DCN onto NVIDIA Jetson edge boards presents significant compatibility and optimization challenges.
+2. **Hardware Deployment Constraints:** A critical limitation identified in this study is hardware deployability. Currently, deploying the modified architecture equipped with DCN onto NVIDIA Jetson edge boards presents significant compatibility and optimization challenges.
 
 ---
 
