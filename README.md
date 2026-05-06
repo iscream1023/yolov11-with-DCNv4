@@ -1,4 +1,4 @@
-# Integrate DCNv4 In YOLOv11 for Amorphous Object Detection
+# Integrate DCNv4 In YOLOv11 for Fire &Smoke Detection
 
 ## Overview
 This repository investigates the integration of Deformable Convolutional Networks (DCNv2[^1], DCNv4[^2]) into the YOLOv11 architecture to enhance the detection capabilities for amorphous objects, such as fire and smoke. 
@@ -24,7 +24,18 @@ The following table presents the detection performance metrics evaluated on the 
 ## Conclusion
 
 Based on the experimental evaluations, we derive the following conclusions:
-1. **Scale-dependent Performance Variation:** The integration of DCNv4 contributed to an improvement in detection accuracy for the YOLOv11-nano (`n`) model. However, no significant performance gains were observed when applied to the larger YOLOv11-small (`s`) model.
+1. **Efficiency Analysis of Deformable Convolutions:** Despite using the smaller YOLOv11n backbone, Experiment 1 (DCNv2) exhibited a 23.1% increase in CPU time (16.453 ms) compared to the baseline (13.371 ms).
+   
+    | Metric | Baseline (YOLOv11s) | Experiment 1 (yolo 11n + DCNv2)	| Experiment 2 (yolo 11n + DCNv4) |
+    | :--- | :---: | :---: |:---: |
+    | Self CPU Time Total | 13.371 ms | 16.453 ms |12.932 ms|
+    | Self CUDA Time Total |2.321 ms |2.281 ms |2.158 ms |
+   
+   Unlike standard convolutions that benefit from high cache hit rates by accessing contiguous memory blocks, DCNv2 relies on dynamic offsets to sample specific spatial locations. This sampling mechanism leads to irregular memory access patterns, significantly reducing cache efficiency and increasing the CPU-to-GPU kernel launch overhead.
+   
+   Otherwise, DCNv4 optimizes the multi-head attention-like structure of DCNv3 by pinning dimensions per head, which aligns better with GPU SIMD architectures.
+
+2. **Scale-dependent Performance Variation:** The integration of DCNv4 contributed to an improvement in detection accuracy for the YOLOv11-nano (`n`) model. However, no significant performance gains were observed when applied to the larger YOLOv11-small (`s`) model.
    
     | Metric | Baseline (YOLOv11s) | Experiment 3 (yolo 11s + DCNv4) |
     | :--- | :---: | :---: |
@@ -33,7 +44,7 @@ Based on the experimental evaluations, we derive the following conclusions:
     | Precision | 0.7757 | 0.7717 | 
     | Recall | 0.7215 | 0.7274 | 
 
-2. **Hardware Deployment Constraints:** A critical limitation identified in this study is hardware deployability. Currently, deploying the modified architecture equipped with DCN onto NVIDIA Jetson edge boards presents significant compatibility and optimization challenges.
+3. **Hardware Deployment Constraints:** A critical limitation identified in this study is hardware deployability. Currently, deploying the modified architecture equipped with DCN onto NVIDIA Jetson edge boards presents significant compatibility and optimization challenges.
 
 ---
 
