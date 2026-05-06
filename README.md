@@ -1,4 +1,4 @@
-# Integrate DCNv4 In YOLOv11 for Fire &Smoke Detection
+# Integrate DCNv4 In YOLOv11 for Amorphous Object Detection
 
 ## Overview
 This repository investigates the integration of Deformable Convolutional Networks (DCNv2[^1], DCNv4[^2]) into the YOLOv11 architecture to enhance the detection capabilities for amorphous objects, such as fire and smoke. 
