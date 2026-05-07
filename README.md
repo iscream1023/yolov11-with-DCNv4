@@ -26,7 +26,7 @@ The following table presents the detection performance metrics evaluated on the 
 Based on the experimental evaluations, we derive the following conclusions:
 1. **Efficiency Analysis of Deformable Convolutions:** Despite using the smaller YOLOv11n backbone, Experiment 1 (DCNv2) exhibited a 23.1% increase in CPU time (16.453 ms) compared to the baseline (13.371 ms).
    
-    | Metric | Baseline (YOLOv11s) | Experiment 1 (yolo 11n + DCNv2)	| Experiment 2 (yolo 11n + DCNv4) |
+    | Metric | Baseline (YOLOv11n) | Experiment 1 (yolo 11n + DCNv2)	| Experiment 2 (yolo 11n + DCNv4) |
     | :--- | :---: | :---: |:---: |
     | Self CPU Time Total | 13.371 ms | 16.453 ms |12.932 ms|
     | Self CUDA Time Total |2.321 ms |2.281 ms |2.158 ms |
