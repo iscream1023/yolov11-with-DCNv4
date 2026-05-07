@@ -33,7 +33,7 @@ Based on the experimental evaluations, we derive the following conclusions:
    
    Unlike standard convolutions that benefit from high cache hit rates by accessing contiguous memory blocks, DCNv2 relies on dynamic offsets to sample specific spatial locations. This sampling mechanism leads to irregular memory access patterns, significantly reducing cache efficiency and increasing the CPU-to-GPU kernel launch overhead.
    
-   Otherwise, DCNv4 optimizes the multi-head attention-like structure of DCNv3 by pinning dimensions per head, which aligns better with GPU SIMD architectures.
+   In contrast, DCNv4 optimizes the multi-head attention-like structure of DCNv3 by pinning dimensions per head, which aligns better with GPU SIMD architectures.
 
 2. **Scale-dependent Performance Variation:** The integration of DCNv4 contributed to an improvement in detection accuracy for the YOLOv11-nano (`n`) model. However, no significant performance gains were observed when applied to the larger YOLOv11-small (`s`) model.
    
@@ -83,7 +83,7 @@ Build and install within your activated environment:
 ### Example if building from source
 ```
 conda activate dcnv4_yolo
-cd rt/to/DCNv4
+cd path/to/DCNv4
 python setup.py install
 ```
 
