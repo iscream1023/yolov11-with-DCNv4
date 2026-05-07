@@ -1,5 +1,12 @@
 # Integrate DCNv4 In YOLOv11 for Amorphous Object Detection
-
+<div align="center">
+  <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/opencv-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white">
+  <img src="https://img.shields.io/badge/pytorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white">
+  <br>
+  <img src="https://img.shields.io/badge/Ultralytics-000000?style=for-the-badge&logo=ultralytics&logoColor=white">
+  <img src="https://img.shields.io/badge/YOLOv11-00FFFF?style=for-the-badge&logo=yolo&logoColor=black">
+</div>
 ## Overview
 This repository investigates the integration of Deformable Convolutional Networks (DCNv2[^1], DCNv4[^2]) into the YOLOv11 architecture to enhance the detection capabilities for amorphous objects, such as fire and smoke. 
 
