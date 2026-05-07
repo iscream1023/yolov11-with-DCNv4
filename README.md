@@ -22,12 +22,12 @@ To evaluate the impact of deformable convolutions on extracting irregular and dy
 ### 1. Detection Performance
 The following table presents the detection performance metrics evaluated on the YOLOv11-nano model.
 
-| Metric | Baseline (YOLOv11) | Experiment 1 (YOLOv11 + DCNv2) | Experiment 2 (YOLOv11 + DCNv4) | Improvement (vs. Baseline) |
-| :--- | :---: | :---: | :---: | :---: |
-| mAP 50 | 0.7581 | 0.7613 | 0.7716 | +1.35%p |
-| mAP 50-95 | 0.4328 | 0.4397 | 0.4471 | +1.43%p |
-| Precision | 0.7583 | 0.7555 | 0.7602 | +0.19%p |
-| Recall | 0.6791 | 0.6922 | 0.7030 | +2.39%p |
+| Metric | Baseline (YOLOv11) | Experiment 1 (YOLOv11 + DCNv2) | Experiment 2 (YOLOv11 + DCNv4) | 
+| :--- | :---: | :---: | :---: |
+| mAP 50 | 0.7581 | 0.7613 | 0.7716 |
+| mAP 50-95 | 0.4328 | 0.4397 | 0.4471 |
+| Precision | 0.7583 | 0.7555 | 0.7602 |
+| Recall | 0.6791 | 0.6922 | 0.7030 |
 
 ## Conclusion
 
